@@ -3,6 +3,7 @@ module lk.ijse.elite_driving_school_management_orm_coursework {
     requires javafx.fxml;
     requires static lombok;
     requires jakarta.persistence;
+    requires org.hibernate.orm.core;
 
 
     opens lk.ijse.elite_driving_school_management_orm_coursework to javafx.fxml;

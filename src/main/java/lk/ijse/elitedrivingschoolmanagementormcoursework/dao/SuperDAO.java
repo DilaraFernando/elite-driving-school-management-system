@@ -1,4 +1,4 @@
 package lk.ijse.elitedrivingschoolmanagementormcoursework.dao;
 
-public interface SuperDAO {
+public interface SuperDAO extends CrudDAO<Course> {
 }
