@@ -1,15 +1,17 @@
 package lk.ijse.elitedrivingschoolmanagementormcoursework.dto;
 
+
 import lombok.*;
 
 import java.util.Date;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
 @Getter
 @ToString
 
-public class PaymentsDTO {
+public class PaymentDTO {
     private String paymentId;
     private String studentId;
     private Date paymentDate;

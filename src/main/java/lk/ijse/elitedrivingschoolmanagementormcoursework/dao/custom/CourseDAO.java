@@ -1,4 +1,6 @@
 package lk.ijse.elitedrivingschoolmanagementormcoursework.dao.custom;
 
-public interface CourseDAO {
+import lk.ijse.elitedrivingschoolmanagementormcoursework.dao.CrudDAO;
+
+public interface CourseDAO extends CrudDAO<CourseDAO> {
 }

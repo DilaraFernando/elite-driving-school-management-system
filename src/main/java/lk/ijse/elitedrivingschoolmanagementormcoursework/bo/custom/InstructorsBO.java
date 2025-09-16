@@ -1,4 +1,24 @@
 package lk.ijse.elitedrivingschoolmanagementormcoursework.bo.custom;
 
-public interface InstructorsBO {
+
+import lk.ijse.elitedrivingschoolmanagementormcoursework.bo.SuperBO;
+import lk.ijse.elitedrivingschoolmanagementormcoursework.dto.InstructorsDTO;
+import java.util.List;
+import java.util.Optional;
+
+public interface InstructorsBO extends SuperBO {
+    List<InstructorsDTO> getAllInstructors() throws Exception;
+
+    String getLastInstructorId() throws Exception;
+
+    boolean saveInstructors(InstructorsDTO t) throws Exception;
+
+    boolean updateInstructors(InstructorsDTO t) throws Exception;
+
+    boolean deleteInstructors(String id) throws Exception;
+
+    List<String> getAllInstructorIds() throws Exception;
+
+    Optional<InstructorsDTO> findByInstructorId(String id) throws Exception;
 }
+

@@ -1,8 +1,10 @@
 package lk.ijse.elitedrivingschoolmanagementormcoursework.dto;
 
+
 import lombok.*;
 
 import java.util.Date;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
@@ -17,3 +19,4 @@ public class StudentCourseDetailsDTO {
     private String status;
     private String grade;
 }
+
