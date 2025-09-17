@@ -21,5 +21,5 @@ public class StudentsDTO {
     private Date registrationDate;
     private ArrayList<StudentCourseDetailsDTO> studentCourseDetails;
     private ArrayList<LessonsDTO> lessons;
-    private ArrayList<PaymentsDTO> payments;
+    private ArrayList<PaymentDTO> payments;
 }

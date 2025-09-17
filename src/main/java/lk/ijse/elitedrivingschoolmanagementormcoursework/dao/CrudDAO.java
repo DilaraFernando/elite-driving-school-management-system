@@ -18,4 +18,6 @@ public interface CrudDAO<T> extends SuperDAO {
     List<String> getAllIds() throws Exception;
 
     Optional<T> findById(String id) throws Exception;
+
+    public String generateNewId();
 }
