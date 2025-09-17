@@ -20,4 +20,6 @@ public interface LessonsBO extends SuperBO {
     List<String> getAllLessonIds() throws Exception;
 
     Optional<LessonsDTO> findByLessonId(String id) throws Exception;
+
+    String generateNewIdLessonsId();
 }

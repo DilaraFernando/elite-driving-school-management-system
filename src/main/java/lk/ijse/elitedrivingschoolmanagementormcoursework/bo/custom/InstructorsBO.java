@@ -20,5 +20,7 @@ public interface InstructorsBO extends SuperBO {
     List<String> getAllInstructorIds() throws Exception;
 
     Optional<InstructorsDTO> findByInstructorId(String id) throws Exception;
+
+    String generateNewInstructorId();
 }
 
