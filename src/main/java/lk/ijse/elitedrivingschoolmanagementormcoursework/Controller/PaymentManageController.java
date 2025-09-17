@@ -67,7 +67,7 @@ public class PaymentManageController implements Initializable {
 
     public void btnAddOnAction(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/interfaces/view/AddPaymentPopUp.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/interfaces/interfaces/view/AddPaymentPopUp.fxml"));
             Parent parent = fxmlLoader.load();
 
             Stage stage = new Stage();
@@ -121,7 +121,7 @@ public class PaymentManageController implements Initializable {
             }
 
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/interfaces/view/AddPaymentPopUp.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/interfaces/interfaces/view/AddPaymentPopUp.fxml"));
                 Parent parent = fxmlLoader.load();
 
                 PaymentPopUpController controller = fxmlLoader.getController();
