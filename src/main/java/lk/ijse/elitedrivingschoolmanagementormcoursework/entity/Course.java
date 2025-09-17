@@ -40,7 +40,7 @@ public class Course {
             mappedBy = "course",
             cascade = CascadeType.ALL
     )
-    private List<StudentCourseDetails> studentCourseDetails;
+    private List<StudentsCourseDetails> studentCourseDetails;
 
     @OneToMany(
             mappedBy = "course",
