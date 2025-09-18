@@ -20,7 +20,7 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-public class PaymentManageController implements Initializable {
+public class PaymentManagePageController implements Initializable {
 //    public TableView<PaymentTM> tblPayment;
 //      public TableColumn<PaymentTM, String> colPaymentId;
 //    public TableColumn<PaymentTM, String> colPaymentDate;
