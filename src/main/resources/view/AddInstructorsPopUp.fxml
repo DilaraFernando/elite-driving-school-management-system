@@ -13,7 +13,7 @@
 
 <AnchorPane prefHeight="581.0" prefWidth="643.0" style="-fx-background-radius: 20px; -fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolmanagementormcoursework.Controller.InstructorsPopUpController">
     <children>
-        <VBox layoutX="44.0" layoutY="83.0" prefHeight="393.0" prefWidth="361.0" style="-fx-background-color: #fff; -fx-background-radius: 20px; -fx-border-color: #e15f41; -fx-border-width: 2px; -fx-border-radius: 20px;" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="238.39999999999998">
+        <VBox layoutX="45.0" layoutY="80.0" prefHeight="394.0" prefWidth="346.0" style="-fx-background-color: #fff; -fx-background-radius: 20px; -fx-border-color: #e15f41; -fx-border-width: 2px; -fx-border-radius: 20px;" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="251.8">
             <children>
                 <HBox prefHeight="58.0" prefWidth="306.0">
                     <children>

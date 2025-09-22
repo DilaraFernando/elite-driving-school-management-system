@@ -5,14 +5,16 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="581.0" prefWidth="400.0" style="-fx-background-radius: 20px;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolmanagementormcoursework.Controller.LessonsPopUpController">
+<AnchorPane prefHeight="581.0" prefWidth="643.0" style="-fx-background-radius: 20px; -fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolmanagementormcoursework.Controller.LessonsPopUpController">
     <children>
-        <VBox layoutX="20.0" layoutY="65.0" prefHeight="419.0" prefWidth="360.0" style="-fx-background-color: #fff; -fx-background-radius: 20px; -fx-border-color: #e15f41; -fx-border-width: 2px; -fx-border-radius: 20px;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <VBox layoutX="43.0" layoutY="59.0" prefHeight="429.0" prefWidth="357.0" style="-fx-background-color: #fff; -fx-background-radius: 20px; -fx-border-color: #e15f41; -fx-border-width: 2px; -fx-border-radius: 20px;" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="244.2">
             <children>
                 <HBox prefHeight="58.0" prefWidth="306.0">
                     <children>
@@ -107,7 +109,7 @@
                 </HBox>
             </children>
         </VBox>
-        <VBox layoutX="51.0" layoutY="489.0" prefHeight="69.0" prefWidth="298.0" style="-fx-background-radius: 20px; -fx-border-radius: 20px; -fx-background-color: #fff; -fx-border-color: #e15f41; -fx-border-width: 2px;" AnchorPane.bottomAnchor="22.399999999999977" AnchorPane.leftAnchor="51.0" AnchorPane.rightAnchor="51.39999999999998">
+        <VBox layoutX="46.0" layoutY="496.0" prefHeight="70.0" prefWidth="351.0" style="-fx-background-radius: 20px; -fx-border-radius: 20px; -fx-background-color: #fff; -fx-border-color: #e15f41; -fx-border-width: 2px;" AnchorPane.bottomAnchor="14.600000000000023" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="246.00000000000006">
             <children>
                 <HBox prefHeight="41.0" prefWidth="306.0">
                     <VBox.margin>
@@ -134,7 +136,7 @@
                 </HBox>
             </children>
         </VBox>
-        <HBox layoutX="25.0" layoutY="14.0" prefHeight="31.0" prefWidth="350.0" style="-fx-background-color: #fff; -fx-background-radius: 15px; -fx-border-color: #e15f41; -fx-border-radius: 15px; -fx-border-width: 2px;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <HBox layoutX="43.0" layoutY="14.0" prefHeight="36.0" prefWidth="356.0" style="-fx-background-color: #fff; -fx-background-radius: 15px; -fx-border-color: #e15f41; -fx-border-radius: 15px; -fx-border-width: 2px;" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="244.20000000000005">
             <children>
                 <Label prefHeight="62.0" prefWidth="128.0" text="Lesson Id">
                     <font>
@@ -159,5 +161,10 @@
                 </Label>
             </children>
         </HBox>
+      <ImageView fitHeight="177.0" fitWidth="253.0" layoutX="399.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ba0d04c103203a7b4a3f3d8daaf98391.jpg" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>
