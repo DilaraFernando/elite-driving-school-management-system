@@ -1,12 +1,12 @@
 package lk.ijse.elitedrivingschoolmanagementormcoursework.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -34,13 +34,11 @@ public class Course {
 
     @ManyToOne
     @JoinColumn(name = "instructor_id", referencedColumnName = "instructor_id")
-    private Instructors instructor;
+    private Instructors instructors;
 
-    @OneToMany(
-            mappedBy = "course",
-            cascade = CascadeType.ALL
-    )
-    private List<StudentsCourseDetails> studentCourseDetails;
+    @ManyToMany
+    private List<Students> students ;
+
 
     @OneToMany(
             mappedBy = "course",

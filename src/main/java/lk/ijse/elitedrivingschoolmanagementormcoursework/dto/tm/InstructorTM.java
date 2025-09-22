@@ -1,6 +1,5 @@
 package lk.ijse.elitedrivingschoolmanagementormcoursework.dto.tm;
 
-
 import javafx.event.ActionEvent;
 import lombok.*;
 
@@ -9,7 +8,8 @@ import lombok.*;
 @Setter
 @Getter
 @ToString
-public class InstructorTM extends ActionEvent{
+
+public class InstructorTM extends ActionEvent {
         private String instructor_id;
         private  String first_name;
         private String last_name;
@@ -17,5 +17,4 @@ public class InstructorTM extends ActionEvent{
         private String phone;
         private String specialization;
         private String availability;
-    }
-
+}

@@ -1,6 +1,5 @@
 package lk.ijse.elitedrivingschoolmanagementormcoursework.dto.tm;
 
-
 import javafx.event.ActionEvent;
 import lombok.*;
 
@@ -21,4 +20,3 @@ public class PaymentTM extends ActionEvent {
     private String status;
     private String studentId;
 }
-

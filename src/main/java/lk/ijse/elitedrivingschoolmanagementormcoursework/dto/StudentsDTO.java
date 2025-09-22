@@ -1,4 +1,6 @@
 package lk.ijse.elitedrivingschoolmanagementormcoursework.dto;
+
+
 import lombok.*;
 
 import java.util.ArrayList;
@@ -9,6 +11,7 @@ import java.util.Date;
 @Setter
 @Getter
 @ToString
+@Builder
 
 public class StudentsDTO {
     private String studentId;
@@ -19,7 +22,11 @@ public class StudentsDTO {
     private String address;
     private Date dob;
     private Date registrationDate;
-    private ArrayList<StudentCourseDetailsDTO> studentCourseDetails;
-    private ArrayList<LessonsDTO> lessons;
-    private ArrayList<PaymentDTO> payments;
+    @Builder.Default
+    private ArrayList<CourseDTO> courses = new ArrayList<>();
+    @Builder.Default
+    private ArrayList<LessonsDTO> lessons =new ArrayList<>();
+    @Builder.Default
+    private ArrayList<PaymentDTO> payments =new ArrayList<>();
+
 }

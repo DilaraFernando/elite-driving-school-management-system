@@ -1,14 +1,11 @@
 package lk.ijse.elitedrivingschoolmanagementormcoursework.entity;
 
-
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Date;
 import java.util.List;
+
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,7 +19,6 @@ public class Students {
     @Id
     @Column
     private String studentId;
-
 
     @Column
     private String firstName;
@@ -45,11 +41,14 @@ public class Students {
     @Column(nullable = false)
     private Date registrationDate;
 
-    @OneToMany(
-            mappedBy = "students",
-            cascade = CascadeType.ALL
+    @ManyToMany
+    @JoinTable(
+            name = "student_course",
+            joinColumns = @JoinColumn(name = "student_id"),
+            inverseJoinColumns = @JoinColumn(name = "course_id")
     )
-    private List<StudentsCourseDetails> studentCourseDetails;
+    private List<Course> courses ;
+
 
     @OneToMany(
             mappedBy = "students",
@@ -62,5 +61,5 @@ public class Students {
             cascade = CascadeType.ALL
     )
     private List<Payments> payments;
-
 }
+

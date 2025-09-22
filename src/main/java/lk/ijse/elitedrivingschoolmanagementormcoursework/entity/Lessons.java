@@ -21,7 +21,7 @@ public class Lessons {
 
     @ManyToOne
     @JoinColumn(name = "studentId", referencedColumnName = "studentId")
-    private Students student;
+    private Students students;
 
     @ManyToOne
     @JoinColumn(name = "courseId", referencedColumnName = "course_id")
@@ -29,7 +29,7 @@ public class Lessons {
 
     @ManyToOne
     @JoinColumn(name = "instructorId", referencedColumnName = "instructor_id")
-    private Instructors instructor;
+    private Instructors instructors;
 
     @Column
     private Date lessonDate;

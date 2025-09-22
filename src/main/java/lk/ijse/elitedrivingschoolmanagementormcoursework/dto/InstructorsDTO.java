@@ -3,12 +3,13 @@ package lk.ijse.elitedrivingschoolmanagementormcoursework.dto;
 import lombok.*;
 
 import java.util.ArrayList;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Setter
 @Getter
 @ToString
-
+@Builder
 public class InstructorsDTO {
     private String instructor_id;
     private  String first_name;
@@ -17,6 +18,8 @@ public class InstructorsDTO {
     private String phone;
     private String specialization;
     private String availability;
-    private ArrayList<LessonsDTO> lessons;
-    private ArrayList<CourseDTO> courses;
+    @Builder.Default
+    private ArrayList<LessonsDTO> lessons = new  ArrayList<>();
+    @Builder.Default
+    private ArrayList<CourseDTO> courses = new ArrayList<>();
 }
