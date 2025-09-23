@@ -39,7 +39,7 @@
         </BorderPane>
         <HBox layoutX="20.0" layoutY="650.0" prefHeight="37.0" prefWidth="1160.0" AnchorPane.bottomAnchor="20.0">
             <children>
-            <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="147.0" style="-fx-background-color: #e15f41;" text="Add Student" textFill="#080606">
+            <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="147.0" style="-fx-background-color: #60a3bc;" text="Add Student" textFill="#080606">
                <HBox.margin>
                   <Insets left="-200.0" />
                </HBox.margin>
@@ -47,7 +47,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-                <Button mnemonicParsing="false" onAction="#btnDeleteOnAAction" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: linear-gradient(to right, #ff7e5f, #feb47b);;" text="Delete Student">
+                <Button mnemonicParsing="false" onAction="#btnDeleteOnAAction" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed);" text="Delete Student">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
@@ -60,9 +60,9 @@
             <Insets left="250.0" />
          </padding>
         </HBox>
-        <VBox layoutX="20.0" layoutY="163.0" prefHeight="562.0" prefWidth="1160.0" style="-fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: #e15f41; -fx-border-width: 3px;" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="170.0">
+        <VBox layoutX="20.0" layoutY="163.0" prefHeight="562.0" prefWidth="1160.0" style="-fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: #60a3bc; -fx-border-width: 3px;" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="170.0">
             <children>
-                <TableView fx:id="tblStudent" onMouseClicked="#onClickTable" prefHeight="662.0" prefWidth="761.0" stylesheets="/interfaces/assets/styles/tableView.css">
+                <TableView fx:id="tblStudent" onMouseClicked="#onClickTable" prefHeight="662.0" prefWidth="761.0" stylesheets="/styles/tableView.css">
                     <columns>
                         <TableColumn fx:id="colId" prefWidth="75.0" text="Student Id" />
                         <TableColumn fx:id="colFirstName" prefWidth="75.0" text="First name" />

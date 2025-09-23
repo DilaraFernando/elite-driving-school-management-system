@@ -1,6 +1,5 @@
 package lk.ijse.elitedrivingschoolmanagementormcoursework.dao;
 
-
 import lk.ijse.elitedrivingschoolmanagementormcoursework.dao.custom.CourseDAO;
 import lk.ijse.elitedrivingschoolmanagementormcoursework.dao.custom.impl.*;
 
@@ -24,8 +23,6 @@ public class DAOFactory {
                 return new PaymentDAOImpl();
             case QUERY:
                 return new QueryDAOImpl();
-            case STUDENT_COURSE_DETAILS:
-                return new StudentCourseDetailsDAOImpl();
             case STUDENTS:
                 return new StudentDAOImpl();
             case USER:
@@ -37,4 +34,3 @@ public class DAOFactory {
         }
     }
 }
-

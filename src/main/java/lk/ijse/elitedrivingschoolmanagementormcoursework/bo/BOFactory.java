@@ -1,6 +1,5 @@
 package lk.ijse.elitedrivingschoolmanagementormcoursework.bo;
 
-
 import lk.ijse.elitedrivingschoolmanagementormcoursework.bo.custom.impl.*;
 import lk.ijse.elitedrivingschoolmanagementormcoursework.dao.DAOFactory;
 import lk.ijse.elitedrivingschoolmanagementormcoursework.dao.DAOTypes;
@@ -19,7 +18,7 @@ public class BOFactory {
 
             case COURSE :
                 return new CourseBOImpl();
-            case INSTRUCTORS:
+                case INSTRUCTORS:
                 return new InstructorsBOImpl();
             case LESSONS:
                 return new LessonsBOImpl();
@@ -27,8 +26,6 @@ public class BOFactory {
                 return new PaymentsBOImpl();
             case QUERY:
                 return new QueryBOImpl();
-            case STUDENT_COURSE_DETAILS:
-                return new StudentCourseDetailsBOImpl();
             case STUDENTS:
                 return new StudentsBOImpl();
             case USER:
