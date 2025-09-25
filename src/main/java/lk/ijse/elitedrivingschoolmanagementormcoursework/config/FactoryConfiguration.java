@@ -18,9 +18,9 @@ public class FactoryConfiguration {
         Properties properties = new Properties();
 
         // load from classpath root: src/main/resources/property_file/hibernate.properties
-        try (InputStream in = FactoryConfiguration.class.getResourceAsStream("/property_file/hibernate.properties")) {
+        try (InputStream in = FactoryConfiguration.class.getResourceAsStream("/hibernate.properties")) {
             if (in == null) {
-                throw new RuntimeException("Resource /property_file/hibernate.properties not found on classpath. Place it under src/main/resources/property_file/");
+                throw new RuntimeException("/hibernate.properties");
             }
             properties.load(in);
 

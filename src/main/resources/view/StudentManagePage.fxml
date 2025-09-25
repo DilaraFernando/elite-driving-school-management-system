@@ -5,8 +5,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
@@ -15,17 +13,7 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolmanagementormcoursework.Controller.StudentManagePageController">
     <children>
-        <BorderPane layoutY="-0.8" prefHeight="171.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="731.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
-            <right>
-                <ImageView fitHeight="170.0" fitWidth="235.0" BorderPane.alignment="CENTER">
-                    <image>
-                        <Image url="@../images/45164a6275a4c5f2ff80c08af58730dc.jpg" />
-                    </image>
-               <BorderPane.margin>
-                  <Insets left="-20.0" />
-               </BorderPane.margin>
-                </ImageView>
-            </right>
+        <BorderPane layoutX="-14.0" layoutY="33.0" prefHeight="171.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="697.4000000000001" AnchorPane.leftAnchor="-14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="33.0">
             <center>
                 <Label text="Student Details." BorderPane.alignment="CENTER">
                     <font>
@@ -37,9 +25,9 @@
                 </Label>
             </center>
         </BorderPane>
-        <HBox layoutX="20.0" layoutY="650.0" prefHeight="37.0" prefWidth="1160.0" AnchorPane.bottomAnchor="20.0">
+        <HBox layoutX="20.0" layoutY="650.0" prefHeight="39.0" prefWidth="1160.0" AnchorPane.bottomAnchor="151.0">
             <children>
-            <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="147.0" style="-fx-background-color: #60a3bc;" text="Add Student" textFill="#080606">
+            <Button mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="43.0" prefWidth="147.0" style="-fx-background-color: #60a3bc;" text="Add Student" textFill="#080606">
                <HBox.margin>
                   <Insets left="-200.0" />
                </HBox.margin>
@@ -47,7 +35,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-                <Button mnemonicParsing="false" onAction="#btnDeleteOnAAction" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed);" text="Delete Student">
+                <Button mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed);" text="Delete Student">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
@@ -60,9 +48,9 @@
             <Insets left="250.0" />
          </padding>
         </HBox>
-        <VBox layoutX="20.0" layoutY="163.0" prefHeight="562.0" prefWidth="1160.0" style="-fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: #60a3bc; -fx-border-width: 3px;" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="170.0">
+        <VBox layoutX="20.0" layoutY="108.8" prefHeight="480.0" prefWidth="1160.0" style="-fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: #60a3bc; -fx-border-width: 3px;" AnchorPane.bottomAnchor="211.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="109.0">
             <children>
-                <TableView fx:id="tblStudent" onMouseClicked="#onClickTable" prefHeight="662.0" prefWidth="761.0" stylesheets="/styles/tableView.css">
+                <TableView fx:id="tblStudent" onMouseClicked="#onClickTable" prefHeight="601.0" prefWidth="1154.0" stylesheets="/styles/tableView.css">
                     <columns>
                         <TableColumn fx:id="colId" prefWidth="75.0" text="Student Id" />
                         <TableColumn fx:id="colFirstName" prefWidth="75.0" text="First name" />
@@ -72,6 +60,7 @@
                         <TableColumn fx:id="colAddress" prefWidth="75.0" text="Address" />
                         <TableColumn fx:id="colDOB" prefWidth="75.0" text="DOB" />
                         <TableColumn fx:id="colRegDate" prefWidth="75.0" text="Register Date" />
+                        <TableColumn fx:id="colEnrolledCourses" prefWidth="75.0" text="Enrolled Courses" />
                     </columns>
                     <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

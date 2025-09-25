@@ -24,6 +24,7 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+
 public class InstructorsManageController implements Initializable {
     public TableView tblInstructors;
     public TableColumn colId;
@@ -38,7 +39,7 @@ public class InstructorsManageController implements Initializable {
 
     public void btnAddOnAction(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/interfaces/view/AddInstructorsPopUp.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/AddInstructorsPopUp.fxml"));
             Parent parent = fxmlLoader.load();
 
             Stage stage = new Stage();
@@ -46,6 +47,7 @@ public class InstructorsManageController implements Initializable {
             stage.setScene(new Scene(parent));
             stage.initModality(Modality.APPLICATION_MODAL); // Block input to other windows
             stage.showAndWait();
+            loadAllInstructors();
         } catch (IOException e) {
             new Alert(Alert.AlertType.ERROR, "Failed to open the popup!").show();
         }
@@ -96,7 +98,7 @@ public class InstructorsManageController implements Initializable {
                 Parent parent = fxmlLoader.load();
 
                 InstructorsPopUpController controller = fxmlLoader.getController();
-                controller.btnUpdateOnAction(selectedItem);
+                controller.setInstructorsData(selectedItem);
 
                 Stage stage = new Stage();
                 stage.setTitle("Update Instructor");

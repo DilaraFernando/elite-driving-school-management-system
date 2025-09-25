@@ -7,7 +7,8 @@ import javafx.scene.control.*;
 import lk.ijse.elitedrivingschoolmanagementormcoursework.bo.BOFactory;
 import lk.ijse.elitedrivingschoolmanagementormcoursework.bo.BOTypes;
 import lk.ijse.elitedrivingschoolmanagementormcoursework.bo.custom.UserBO;
-import lk.ijse.elitedrivingschoolmanagementormcoursework.Controller.util.passwordEncryption;
+import lk.ijse.elitedrivingschoolmanagementormcoursework.dto.tm.UserTM;
+import lk.ijse.elitedrivingschoolmanagementormcoursework.util.passwordEncryption;
 import lk.ijse.elitedrivingschoolmanagementormcoursework.dto.UserDTO;
 
 import java.net.URL;
@@ -68,9 +69,9 @@ public class UserPopUpController implements Initializable {
             boolean isSaved = userBO.saveUsers(new UserDTO(
                     userId,
                     username,
-                    email,
                     encryptedPassword,
                     role,
+                    email,
                     status
             ));
             if (isSaved) {
@@ -111,9 +112,9 @@ public class UserPopUpController implements Initializable {
             boolean isUpdated = userBO.updateUsers(new UserDTO(
                     userId,
                     username,
-                    email,
                     encryptedPassword,
                     role,
+                    email,
                     status
             ));
             if (isUpdated) {
@@ -125,5 +126,17 @@ public class UserPopUpController implements Initializable {
             new Alert(Alert.AlertType.ERROR, "Error: " + e.getMessage()).show();
         }
     }
+
+    public void setUserData(UserTM selectedItem) {
+        lblUserId.setText(selectedItem.getUserId());
+        txtUsername.setText(selectedItem.getUserName());
+        txtPassword.setText(selectedItem.getPassword());
+        txtConfirmPassword.setText(selectedItem.getPassword());
+        txtEmail.setText(selectedItem.getEmail());
+        cmbRole.setValue(selectedItem.getRole());
+        btnSave.setDisable(true);
+        lblUserId.setDisable(true);
+    }
+
 
 }

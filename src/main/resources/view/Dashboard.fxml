@@ -3,153 +3,78 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ancDashBoardPage" prefHeight="800.0" prefWidth="1600.0" styleClass="root" stylesheets="@/styles/tableView.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolmanagementormcoursework.Controller.DashboardPageController">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolmanagementormcoursework.Controller.DashboardPageController">
     <children>
-        <HBox layoutX="0.8" layoutY="8.0" prefHeight="791.0" prefWidth="1552.0" style="-fx-border-color: #0c2461; -fx-border-radius: 20; -fx-background-radius: 20;" styleClass="root" stylesheets="@/styles/tableView.css" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="8.0">
+        <VBox layoutX="7.0" prefHeight="800.0" prefWidth="268.0" style="-fx-background-color: #ffffff; -fx-background-radius: 0  20px 20px 0;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="5.0">
             <children>
-                <VBox prefHeight="738.0" prefWidth="451.0" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: #ffffff; -fx-border-color: #0c2461;" styleClass="root" stylesheets="@/styles/tableView.css">
-                    <HBox.margin>
-                        <Insets bottom="10.0" left="50.0" right="10.0" top="10.0" />
-                    </HBox.margin>
-                    <effect>
-                        <DropShadow />
-                    </effect>
-                    <children>
-                        <HBox prefHeight="57.0" prefWidth="350.0" style="-fx-background-color: #ffffff;">
-                            <children>
-                                <Label onMouseClicked="#goToLoginPage" text="&gt; BACK">
-                                    <HBox.margin>
-                                        <Insets left="10.0" top="20.0" />
-                                    </HBox.margin>
-                                    <font>
-                                        <Font name="System Bold" size="20.0" />
-                                    </font>
-                                </Label>
-                            </children>
-                        </HBox>
-                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="93.0" prefWidth="451.0">
-                            <children>
-                                <Label prefHeight="58.0" prefWidth="242.0" text="   OVERVIEW  ">
-                                    <HBox.margin>
-                                        <Insets left="100.0" top="10.0" />
-                                    </HBox.margin>
-                                    <font>
-                                        <Font name="Times New Roman Bold" size="31.0" />
-                                    </font>
-                                </Label>
-                        <ImageView fitHeight="110.0" fitWidth="133.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../images/45164a6275a4c5f2ff80c08af58730dc.jpg" />
-                           </image>
-                        </ImageView>
-                            </children>
-                            <VBox.margin>
-                                <Insets top="10.0" />
-                            </VBox.margin>
-                        </HBox>
-                        <Button mnemonicParsing="false" onAction="#btnGoCourseOnAction" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed); -fx-border-color: #0c2461;" styleClass="cur-button" stylesheets="@/styles/tableView.css" text="COURSE">
-                            <VBox.margin>
-                                <Insets left="150.0" />
-                            </VBox.margin>
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#btnGoInstructorOnAction" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed); -fx-border-color: #0c2461;" styleClass="cur-button" stylesheets="@/styles/tableView.css" text="INSTRUCTOR">
-                            <VBox.margin>
-                                <Insets left="150.0" top="30.0" />
-                            </VBox.margin>
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#btnGoLessonsOnAction" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed); -fx-border-color: #0c2461;" styleClass="cur-button" stylesheets="@/styles/tableView.css" text="LESSONS">
-                            <VBox.margin>
-                                <Insets left="150.0" top="30.0" />
-                            </VBox.margin>
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#btnGoPaymentOnAction" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed); -fx-border-color: #0c2461;" styleClass="cur-button" stylesheets="@/styles/tableView.css" text="PAYMENT">
-                            <VBox.margin>
-                                <Insets left="150.0" top="30.0" />
-                            </VBox.margin>
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#btnGoStudentOnAction" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed); -fx-border-color: #0c2461;" styleClass="cur-button" stylesheets="@/styles/tableView.css" text="STUDENT">
-                            <VBox.margin>
-                                <Insets left="150.0" top="30.0" />
-                            </VBox.margin>
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#btnGoUserOnAction" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed); -fx-border-color: #0c2461;" styleClass="cur-button" stylesheets="@/styles/tableView.css" text="USER">
-                            <VBox.margin>
-                                <Insets left="150.0" top="30.0" />
-                            </VBox.margin>
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                        </Button>
-                    </children>
-                </VBox>
-                <VBox prefHeight="754.0" prefWidth="930.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #ffffff; -fx-border-color: #0c2461;" styleClass="root" stylesheets="@/styles/tableView.css" HBox.hgrow="NEVER">
-                    <HBox.margin>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="15.0" />
-                    </HBox.margin>
-                    <effect>
-                        <DropShadow radius="12.75" width="32.0" />
-                    </effect>
-                    <children>
-                        <HBox prefHeight="130.0" prefWidth="930.0">
-                            <VBox.margin>
-                                <Insets top="20.0" />
-                            </VBox.margin>
-                            <children>
-                                <Label prefHeight="47.0" prefWidth="582.0" text="ELITE DRIVING SCHOOL MANAGMENT SYSTEM">
-                                    <HBox.margin>
-                                        <Insets left="200.0" top="50.0" />
-                                    </HBox.margin>
-                                    <font>
-                                        <Font name="Arial" size="24.0" />
-                                    </font>
-                                </Label>
-                            </children>
-                        </HBox>
-                        <ImageView fitHeight="496.0" fitWidth="533.0" pickOnBounds="true" preserveRatio="true">
-                            <VBox.margin>
-                                <Insets left="240.0" />
-                            </VBox.margin>
-                            <image>
-                                <Image url="@../images/a8c9a047a062220cbb74c1bc3b81f11d.jpg" />
-                            </image>
-                        </ImageView>
-                        <ImageView fitHeight="113.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
-                            <VBox.margin>
-                                <Insets left="800.0" />
-                            </VBox.margin>
-                            <image>
-                                <Image url="@/images/a8c9a047a062220cbb74c1bc3b81f11d.jpg" />
-                            </image>
-                        </ImageView>
-                    </children>
-                </VBox>
+                <StackPane prefHeight="150.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/45164a6275a4c5f2ff80c08af58730dc.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+                </StackPane>
+                <Button mnemonicParsing="false" onAction="#btnStudentOnAction" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed); -fx-border-color: #60a3bc;" styleClass="cur-button" stylesheets="@../styles/button.css" text="Student">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#btnLessonsOnAction" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed); -fx-border-color: #60a3bc;" styleClass="cur-button" stylesheets="@../styles/button.css" text="Lesson">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#btnPaymentsOnAction" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed); -fx-border-color: #60a3bc;" styleClass="cur-button" stylesheets="@../styles/button.css" text="Payments">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btnInstructors" mnemonicParsing="false" onAction="#btnInstructorOnAction" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed); -fx-border-color: #60a3bc;" styleClass="cur-button" stylesheets="@../styles/button.css" text="Instructor">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btnCourse" mnemonicParsing="false" onAction="#btnCourseOnAction" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed); -fx-border-color: #60a3bc;" styleClass="cur-button" stylesheets="@../styles/button.css" text="Course">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="btnUser" mnemonicParsing="false" onAction="#btnUserOnAction" prefHeight="39.0" prefWidth="170.0" style="-fx-background-color: linear-gradient(to right, #2193b0, #6dd5ed); -fx-border-color: #60a3bc;" styleClass="cur-button" stylesheets="@../styles/button.css" text="User">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#btnLogOutOnAction" prefHeight="39.0" prefWidth="170.0" styleClass="cur-button" stylesheets="@../styles/button.css" text="Log Out">
+                    <VBox.margin>
+                        <Insets top="30.0" />
+                    </VBox.margin>
+                </Button>
             </children>
-            <effect>
-                <DropShadow radius="12.75" width="32.0" />
-            </effect>
-        </HBox>
+            <padding>
+                <Insets left="50.0" right="50.0" />
+            </padding>
+        </VBox>
+        <AnchorPane fx:id="ancDashBoard" layoutX="271.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="271.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="444.0" fitWidth="506.0" layoutX="331.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/a8c9a047a062220cbb74c1bc3b81f11d.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="233.0" layoutY="66.0" text="ELITE DRIVING SCHOOL MANAGEMENT SYSTEM">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
     </children>
 </AnchorPane>

@@ -25,6 +25,7 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+
 public class CourseManagePageController implements Initializable {
 
     public TableView<CourseTM> tblCourse;
@@ -47,6 +48,7 @@ public class CourseManagePageController implements Initializable {
             stage.setScene(new Scene(parent));
             stage.initModality(Modality.APPLICATION_MODAL); // Block input to other windows
             stage.showAndWait();
+            loadAllCourses();
         } catch (IOException e) {
             new Alert(Alert.AlertType.ERROR, "Failed to open the popup!").show();
         }
@@ -97,7 +99,7 @@ public class CourseManagePageController implements Initializable {
                 Parent parent = fxmlLoader.load();
 
                 CoursePopUpController controller = fxmlLoader.getController();
-                controller.btnUpdateOnAction(selectedItem);
+                controller.setCourseData(selectedItem);
 
                 Stage stage = new Stage();
                 stage.setTitle("Update Course");

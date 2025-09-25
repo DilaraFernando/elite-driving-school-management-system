@@ -25,6 +25,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
+
 public class StudentManagePageController implements Initializable {
     public TableView<StudentTM> tblStudent;
     public TableColumn<StudentTM, String> colId;
@@ -54,25 +55,6 @@ public class StudentManagePageController implements Initializable {
         loadAllStudents();
     }
 
-    private StudentTM toStudentTM(StudentsDTO dto) {
-        List<String> courseNames = dto.getCourses().stream()
-                .map(CourseDTO::getCourse_name)
-                .collect(Collectors.toList()); // ✅ keep as List instead of String
-
-        return new StudentTM(
-                dto.getStudentId(),
-                dto.getFirstName(),
-                dto.getLastName(),
-                dto.getEmail(),
-                dto.getPhone(),
-                dto.getAddress(),
-                dto.getDob(),
-                dto.getRegistrationDate(),
-                courseNames
-        );
-    }
-
-
     private void loadAllStudents() {
         try {
             List<StudentsDTO> students = studentsBO.getAllStudents();
@@ -85,9 +67,30 @@ public class StudentManagePageController implements Initializable {
         }
     }
 
+    private StudentTM toStudentTM(StudentsDTO dto) {
+        String courseIds = (dto.getCourses() == null || dto.getCourses().isEmpty()) ? "Not Found" :
+                String.join(", ", dto.getCourses().stream()
+                        .map(CourseDTO::getCourse_id)
+                        .toList());
+        System.out.println(dto);
+
+        return new StudentTM(
+                dto.getStudentId(),
+                dto.getFirstName(),
+                dto.getLastName(),
+                dto.getEmail(),
+                dto.getPhone(),
+                dto.getAddress(),
+                dto.getDob(),
+                dto.getRegistrationDate(),
+                courseIds
+        );
+    }
+
+
     public void btnAddOnAction(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/interfaces/view/AddStudentPopUp.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/AddStudentPopUp.fxml"));
             Parent parent = fxmlLoader.load();
 
             Stage stage = new Stage();
@@ -95,14 +98,43 @@ public class StudentManagePageController implements Initializable {
             stage.setScene(new Scene(parent));
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.showAndWait();
-
             loadAllStudents();
         } catch (IOException e) {
             new Alert(Alert.AlertType.ERROR, "Failed to open the popup!").show();
         }
     }
 
-    public void btnDeleteOnAAction(ActionEvent actionEvent) {
+
+    public void onClickTable(MouseEvent mouseEvent) {
+        if (mouseEvent.getClickCount() == 2) {
+            StudentTM selectedItem = tblStudent.getSelectionModel().getSelectedItem();
+            if (selectedItem == null) {
+                new Alert(Alert.AlertType.WARNING, "Please select a student to update!").show();
+                return;
+            }
+
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/interfaces/view/AddStudentPopUp.fxml"));
+                Parent parent = fxmlLoader.load();
+
+                StudentPopUpController controller = fxmlLoader.getController();
+                controller.setStudentData(selectedItem);
+
+                Stage stage = new Stage();
+                stage.setTitle("Update Student");
+                stage.setScene(new Scene(parent));
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.showAndWait();
+
+                loadAllStudents();
+            } catch (IOException e) {
+                new Alert(Alert.AlertType.ERROR, "Failed to open the popup!").show();
+            }
+        }
+    }
+
+
+    public void btnDeleteOnAction(ActionEvent actionEvent) {
         Alert alert = new Alert(
                 Alert.AlertType.CONFIRMATION,
                 "Are you sure whether you want to delete this student?",
@@ -130,34 +162,6 @@ public class StudentManagePageController implements Initializable {
                 }
             } catch (Exception e) {
                 throw new RuntimeException(e);
-            }
-        }
-    }
-
-    public void onClickTable(MouseEvent mouseEvent) {
-        if (mouseEvent.getClickCount() == 2) {
-            StudentTM selectedItem = tblStudent.getSelectionModel().getSelectedItem();
-            if (selectedItem == null) {
-                new Alert(Alert.AlertType.WARNING, "Please select a student to update!").show();
-                return;
-            }
-
-            try {
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/interfaces/view/AddStudentPopUp.fxml"));
-                Parent parent = fxmlLoader.load();
-
-                StudentPopUpController controller = fxmlLoader.getController();
-                controller.btnSaveOncAction(selectedItem);
-
-                Stage stage = new Stage();
-                stage.setTitle("Update Student");
-                stage.setScene(new Scene(parent));
-                stage.initModality(Modality.APPLICATION_MODAL);
-                stage.showAndWait();
-
-                loadAllStudents();
-            } catch (IOException e) {
-                new Alert(Alert.AlertType.ERROR, "Failed to open the popup!").show();
             }
         }
     }

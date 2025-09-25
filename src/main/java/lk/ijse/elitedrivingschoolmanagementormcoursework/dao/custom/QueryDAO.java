@@ -6,4 +6,6 @@ import lk.ijse.elitedrivingschoolmanagementormcoursework.dao.SuperDAO;
 
 public interface QueryDAO extends SuperDAO {
     public int getStudentCountForLesson(String lessonId);
+
+    double getTotalCourseAmountByStudentId(String studentId);
 }

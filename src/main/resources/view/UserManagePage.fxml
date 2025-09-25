@@ -5,18 +5,16 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolmanagementormcoursework.Controller.StudentManagePageController">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolmanagementormcoursework.Controller.UserManagePageController">
     <children>
         <BorderPane layoutY="3.0" prefHeight="174.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="713.8" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
-            <center>
+         <bottom>
                 <Label text="User Details." BorderPane.alignment="CENTER">
                     <font>
                         <Font name="Tahoma Bold" size="45.0" />
@@ -25,19 +23,12 @@
                   <Insets left="100.0" />
                </BorderPane.margin>
                 </Label>
-            </center>
-         <right>
-                <ImageView fitHeight="166.0" fitWidth="195.0" BorderPane.alignment="CENTER">
-                    <image>
-                        <Image url="@../images/45164a6275a4c5f2ff80c08af58730dc.jpg" />
-                    </image>
-                </ImageView>
-         </right>
+         </bottom>
         </BorderPane>
         <HBox layoutY="110.0" prefHeight="37.0" prefWidth="1160.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="127.0" />
-        <HBox layoutX="20.0" layoutY="650.0" prefHeight="37.0" prefWidth="1160.0" AnchorPane.bottomAnchor="20.0">
+        <HBox layoutX="20.0" layoutY="650.0" prefHeight="38.0" prefWidth="1160.0" AnchorPane.bottomAnchor="161.0">
             <children>
-            <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="136.0" style="-fx-background-color: #60a3bc;" text="Add User">
+            <Button mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="48.0" prefWidth="136.0" style="-fx-background-color: #60a3bc;" text="Add User">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -52,9 +43,9 @@
                 </Button>
             </children>
         </HBox>
-        <VBox layoutX="20.0" layoutY="163.0" prefHeight="562.0" prefWidth="1160.0" style="-fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: #60a3bc; -fx-border-width: 3px;" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="170.0">
+        <VBox layoutX="20.0" layoutY="115.2" prefHeight="479.0" prefWidth="1160.0" style="-fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: #60a3bc; -fx-border-width: 3px;" AnchorPane.bottomAnchor="206.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="115.0">
             <children>
-                <TableView fx:id="tblUser" onMouseClicked="#onClickTable" prefHeight="662.0" prefWidth="1149.0" stylesheets="@/styles/tableView.css">
+                <TableView fx:id="tblUser" onMouseClicked="#onClickTable" prefHeight="662.0" prefWidth="1149.0" stylesheets="/styles/tableView.css">
                     <columns>
                         <TableColumn fx:id="colId" prefWidth="75.0" text="User ID" />
                         <TableColumn fx:id="colUsername" prefWidth="75.0" text="Username" />

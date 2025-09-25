@@ -18,7 +18,9 @@ public class BOFactory {
 
             case COURSE :
                 return new CourseBOImpl();
-                case INSTRUCTORS:
+            case ENROLL:
+                return new EnrollBOImpl();
+            case INSTRUCTORS:
                 return new InstructorsBOImpl();
             case LESSONS:
                 return new LessonsBOImpl();

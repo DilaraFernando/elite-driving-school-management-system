@@ -6,14 +6,12 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="581.0" prefWidth="643.0" style="-fx-background-radius: 20px; -fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolmanagementormcoursework.Controller.UserPopUpController">
+<AnchorPane prefHeight="468.0" prefWidth="423.0" style="-fx-background-radius: 20px; -fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolmanagementormcoursework.Controller.UserPopUpController">
     <children>
         <VBox layoutX="36.0" layoutY="72.0" prefHeight="402.0" prefWidth="332.0" style="-fx-background-color: #fff; -fx-background-radius: 20px; -fx-border-color:  #60a3bc; -fx-border-width: 2px; -fx-border-radius: 20px;" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="275.19999999999993">
             <children>
@@ -160,10 +158,5 @@
             </children>
         </HBox>
         <HBox prefHeight="100.0" prefWidth="200.0" />
-      <ImageView fitHeight="202.0" fitWidth="279.0" layoutX="372.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/ba0d04c103203a7b4a3f3d8daaf98391.jpg" />
-         </image>
-      </ImageView>
     </children>
 </AnchorPane>

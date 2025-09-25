@@ -6,7 +6,7 @@ public enum BOTypes {
     LESSONS,
     PAYMENTS,
     QUERY,
-    STUDENT_COURSE_DETAILS,
+    ENROLL,
     STUDENTS,
     USER
 }

@@ -6,8 +6,6 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
@@ -16,34 +14,11 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolmanagementormcoursework.Controller.PaymentManagePageController">
     <children>
-        <BorderPane layoutY="-19.0" prefHeight="200.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="828.6" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-19.0">
-            <center>
-                <Label text="Payments Details." BorderPane.alignment="CENTER">
-                    <font>
-                        <Font name="Tahoma Bold" size="45.0" />
-                    </font>
-                </Label>
-            </center>
-         <right>
-                <ImageView fitHeight="183.0" fitWidth="184.0" BorderPane.alignment="CENTER">
-                    <image>
-                        <Image url="@../images/45164a6275a4c5f2ff80c08af58730dc.jpg" />
-                    </image>
-                </ImageView>
-         </right>
-        </BorderPane>
-        <HBox layoutY="110.0" prefHeight="37.0" prefWidth="1160.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="127.0">
+        <BorderPane layoutY="-19.0" prefHeight="200.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="828.6" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-19.0" />
+        <HBox layoutY="110.0" prefHeight="37.0" prefWidth="1160.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="127.0" />
+        <HBox layoutX="20.0" layoutY="650.0" prefHeight="38.0" prefWidth="1160.0" AnchorPane.bottomAnchor="160.0">
             <children>
-                <TextField prefHeight="35.0" prefWidth="321.0" promptText="search">
-                    <HBox.margin>
-                        <Insets />
-                    </HBox.margin>
-                </TextField>
-            </children>
-        </HBox>
-        <HBox layoutX="20.0" layoutY="650.0" prefHeight="37.0" prefWidth="1160.0" AnchorPane.bottomAnchor="20.0">
-            <children>
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="136.0" style="-fx-background-color: #60a3bc;" text="Add Payments">
+            <Button mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="136.0" style="-fx-background-color: #60a3bc;" text="Add Payments">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -58,7 +33,7 @@
                 </Button>
             </children>
         </HBox>
-        <VBox layoutX="20.0" layoutY="163.0" prefHeight="562.0" prefWidth="1160.0" style="-fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: #60a3bc; -fx-border-width: 3px;" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="170.0">
+        <VBox layoutX="20.0" layoutY="140.0" prefHeight="462.0" prefWidth="1160.0" style="-fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: #60a3bc; -fx-border-width: 3px;" AnchorPane.bottomAnchor="208.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="140.0">
             <children>
                 <TableView fx:id="tblPayment" onMouseClicked="#onClickTable" prefHeight="758.0" prefWidth="1154.0" stylesheets="/styles/tableView.css">
                     <columns>
@@ -78,5 +53,11 @@
                 </TableView>
             </children>
         </VBox>
+          <Label layoutX="456.0" layoutY="14.0" text="Payments Details.">
+              <font>
+                  <Font name="Tahoma Bold" size="45.0" />
+              </font>
+          </Label>
+          <TextField layoutX="735.0" layoutY="83.0" prefHeight="35.0" prefWidth="321.0" promptText="search" />
     </children>
 </AnchorPane>

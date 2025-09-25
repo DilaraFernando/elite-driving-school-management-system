@@ -6,24 +6,15 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolmanagementormcoursework.Controller.CourseManagePageController">
+<AnchorPane prefHeight="884.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolmanagementormcoursework.Controller.CourseManagePageController">
     <children>
         <BorderPane layoutX="6.0" prefHeight="180.0" prefWidth="1190.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="809.6" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="5.2000000000000455" AnchorPane.topAnchor="0.0">
-            <right>
-                <ImageView fitHeight="179.0" fitWidth="195.0" BorderPane.alignment="CENTER">
-                    <image>
-                        <Image url="@../images/45164a6275a4c5f2ff80c08af58730dc.jpg" />
-                    </image>
-                </ImageView>
-            </right>
             <center>
                 <Label text="Course Details." BorderPane.alignment="CENTER">
                     <font>
@@ -44,9 +35,9 @@
                 </TextField>
             </children>
         </HBox>
-        <HBox layoutX="20.0" layoutY="650.0" prefHeight="37.0" prefWidth="1160.0" AnchorPane.bottomAnchor="20.0">
+        <HBox layoutX="20.0" layoutY="650.0" prefHeight="38.0" prefWidth="1160.0" AnchorPane.bottomAnchor="148.0">
             <children>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="134.0" style="-fx-background-color: #60a3bc;" text="Add Course">
+            <Button mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="50.0" prefWidth="134.0" style="-fx-background-color: #60a3bc;" text="Add Course">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -61,9 +52,9 @@
                 </Button>
             </children>
         </HBox>
-        <VBox layoutX="20.0" layoutY="163.0" prefHeight="562.0" prefWidth="1160.0" style="-fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: #60a3bc; -fx-border-width: 3px;" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="170.0">
+        <VBox layoutX="20.0" layoutY="163.0" prefHeight="621.0" prefWidth="1160.0" style="-fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-color: #60a3bc; -fx-border-width: 2px;" AnchorPane.bottomAnchor="197.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="170.0">
             <children>
-                <TableView fx:id="tblCourse" onMouseClicked="#onClickTable" prefHeight="758.0" prefWidth="1154.0" stylesheets="/styles/tableView.css">
+                <TableView fx:id="tblCourse" onMouseClicked="#onClickTable" prefHeight="616.0" prefWidth="1134.0" stylesheets="/styles/tableView.css">
                     <columns>
                         <TableColumn fx:id="colCourseId" prefWidth="75.0" text="Course ID" />
                         <TableColumn fx:id="colCourseName" prefWidth="75.0" text="Course Name" />

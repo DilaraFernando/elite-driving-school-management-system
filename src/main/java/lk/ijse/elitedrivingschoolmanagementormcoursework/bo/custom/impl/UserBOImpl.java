@@ -78,6 +78,11 @@ public class UserBOImpl implements UserBO {
 
     @Override
     public String generateNewUserId() {
-        return "";
+        return userDAO.generateNewId();
+    }
+
+    @Override
+    public UserDTO getUserByUsername(String inputUsername) {
+        return null;
     }
 }
