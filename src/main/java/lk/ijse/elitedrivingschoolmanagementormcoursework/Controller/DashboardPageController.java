@@ -50,20 +50,20 @@ public class DashboardPageController implements Initializable {
         navigateTo("/view/UserManagePage.fxml");
     }
 
-    public void btnLogOutOnAction(ActionEvent actionEvent) {
+    public void btnLogOutOnAction(ActionEvent actionEvent){
         try {
-            // Close current stage (the one with the logout button)
+
             Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             currentStage.close();
 
-            // Load the login page
+
             Parent root = FXMLLoader.load(getClass().getResource("/view/LoginPage.fxml"));
             Stage loginStage = new Stage();
             loginStage.setScene(new Scene(root));
             loginStage.setTitle("Login");
             loginStage.show();
 
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
             new Alert(Alert.AlertType.ERROR, "Something went wrong while logging out!").show();
         }

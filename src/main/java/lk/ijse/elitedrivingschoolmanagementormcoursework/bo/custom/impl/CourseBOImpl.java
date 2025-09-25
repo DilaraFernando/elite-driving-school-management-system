@@ -76,6 +76,6 @@ public class CourseBOImpl implements CourseBO {
 
     @Override
     public String generateNewCourseId() {
-        return "";
+        return courseDAO.generateNewId();
     }
 }

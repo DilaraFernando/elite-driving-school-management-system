@@ -105,6 +105,6 @@ public class LessonsBOImpl implements LessonsBO {
 
     @Override
     public String generateNewIdLessonsId() {
-        return "";
+        return lessonsDAO.generateNewId();
     }
 }

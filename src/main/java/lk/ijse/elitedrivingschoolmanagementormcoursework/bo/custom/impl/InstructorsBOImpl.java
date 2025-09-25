@@ -78,6 +78,6 @@ public class InstructorsBOImpl implements InstructorsBO {
 
     @Override
     public String generateNewInstructorId() {
-        return "";
+        return instructorsDAO.generateNewId();
     }
 }

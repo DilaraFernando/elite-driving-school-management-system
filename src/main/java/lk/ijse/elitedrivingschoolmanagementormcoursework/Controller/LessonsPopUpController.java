@@ -62,7 +62,6 @@ public class LessonsPopUpController implements Initializable {
             Date lessonDate = dateFormat.parse(lessonDateStr);
             String startTime = startTimeStr;
             String endTime = endTimeStr;
-
             boolean isSaved = lessonsBO.saveLessons(new LessonsDTO(
                     lessonId, studentId, courseId, instructorId, lessonDate, startTime,  endTime, status
             ));
@@ -121,8 +120,8 @@ public class LessonsPopUpController implements Initializable {
             cmbStatus.setItems(FXCollections.observableArrayList("Scheduled", "Ongoing", "Cancelled"));
             cmbStudentId.setItems(FXCollections.observableArrayList(studentBO.getAllStudentIds()));
             cmbCourseId.setItems(FXCollections.observableArrayList(courseBO.getAllCourseIds()));
-            cmbInstructorId.setItems(FXCollections.observableArrayList(instructorsBO.getAllInstructorIds
-                    ()));
+            cmbInstructorId.setItems(FXCollections.observableArrayList(instructorsBO.getAllInstructorIds()));
+
         }catch (Exception e){
             throw new RuntimeException(e);
         }
