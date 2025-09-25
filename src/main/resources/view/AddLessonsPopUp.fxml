@@ -5,16 +5,14 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="581.0" prefWidth="643.0" style="-fx-background-radius: 20px; -fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolmanagementormcoursework.Controller.LessonsPopUpController">
+<AnchorPane prefHeight="581.0" prefWidth="400.0" style="-fx-background-radius: 20px;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolmanagementormcoursework.Controller.LessonsPopUpController">
     <children>
-        <VBox layoutX="43.0" layoutY="59.0" prefHeight="429.0" prefWidth="357.0" style="-fx-background-color: #fff; -fx-background-radius: 20px; -fx-border-color:  #60a3bc; -fx-border-width: 2px; -fx-border-radius: 20px;" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="244.2">
+        <VBox layoutX="20.0" layoutY="65.0" prefHeight="419.0" prefWidth="360.0" style="-fx-background-color: #fff; -fx-background-radius: 20px; -fx-border-color: #000; -fx-border-width: 2px; -fx-border-radius: 20px;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
             <children>
                 <HBox prefHeight="58.0" prefWidth="306.0">
                     <children>
@@ -63,7 +61,7 @@
                             </HBox.margin>
                             <children>
                                 <Label prefHeight="18.0" prefWidth="55.0" text="Status" />
-                                <TextField fx:id="txtStatus" style="-fx-border-radius: 20px; -fx-background-radius: 20px;" />
+                                <ComboBox fx:id="cmbStatus" style="-fx-border-radius: 20px; -fx-background-radius: 20px;" />
                             </children>
                         </VBox>
                     </children>
@@ -109,14 +107,14 @@
                 </HBox>
             </children>
         </VBox>
-        <VBox layoutX="46.0" layoutY="496.0" prefHeight="70.0" prefWidth="351.0" style="-fx-background-radius: 20px; -fx-border-radius: 20px; -fx-background-color: #fff; -fx-border-color:  #60a3bc; -fx-border-width: 2px;" AnchorPane.bottomAnchor="14.600000000000023" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="246.00000000000006">
+        <VBox layoutX="51.0" layoutY="489.0" prefHeight="69.0" prefWidth="298.0" style="-fx-background-radius: 20px; -fx-border-radius: 20px; -fx-background-color: #fff; -fx-border-color: #000; -fx-border-width: 2px;" AnchorPane.bottomAnchor="22.399999999999977" AnchorPane.leftAnchor="51.0" AnchorPane.rightAnchor="51.39999999999998">
             <children>
                 <HBox prefHeight="41.0" prefWidth="306.0">
                     <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </VBox.margin>
                     <children>
-                        <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnSaveOncAction" prefHeight="26.0" prefWidth="135.0" style="-fx-background-radius: 20px; -fx-background-color:  #60a3bc;" text="Save">
+                        <Button fx:id="btnSave" mnemonicParsing="false" onAction="#btnSaveOncAction" prefHeight="26.0" prefWidth="135.0" style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(to right, #B2FEFA, #0ED2F7);" text="Save">
                             <HBox.margin>
                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                             </HBox.margin>
@@ -124,7 +122,7 @@
                                 <Font name="System Bold" size="15.0" />
                             </font>
                         </Button>
-                        <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="135.0" style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(to right, #ff7e5f, #feb47b);" text="Update">
+                        <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="135.0" style="-fx-background-radius: 20px; -fx-background-color: linear-gradient(to right, #00b09b, #96c93d);" text="Update">
                             <HBox.margin>
                                 <Insets top="10.0" />
                             </HBox.margin>
@@ -136,7 +134,7 @@
                 </HBox>
             </children>
         </VBox>
-        <HBox layoutX="43.0" layoutY="14.0" prefHeight="36.0" prefWidth="356.0" style="-fx-background-color: #fff; -fx-background-radius: 15px; -fx-border-color:  #60a3bc; -fx-border-radius: 15px; -fx-border-width: 2px;" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="244.20000000000005">
+        <HBox layoutX="25.0" layoutY="14.0" prefHeight="31.0" prefWidth="350.0" style="-fx-background-color: #fff; -fx-background-radius: 15px; -fx-border-color: #000; -fx-border-radius: 15px; -fx-border-width: 2px;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
             <children>
                 <Label prefHeight="62.0" prefWidth="128.0" text="Lesson Id">
                     <font>
@@ -161,10 +159,5 @@
                 </Label>
             </children>
         </HBox>
-      <ImageView fitHeight="177.0" fitWidth="253.0" layoutX="399.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/ba0d04c103203a7b4a3f3d8daaf98391.jpg" />
-         </image>
-      </ImageView>
     </children>
 </AnchorPane>
