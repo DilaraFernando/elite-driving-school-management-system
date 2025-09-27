@@ -66,11 +66,11 @@ public class LoginPageController implements Initializable {
             UserDTO user = userBO.getUserByUsername(inputUsername);
 
             if (user != null && passwordEncryption.checkPassword(inputPassword,user.getPassword())) {
-
+                System.out.println(user+"+"+passwordEncryption.checkPassword(inputPassword,user.getPassword()));
                 AuthUtil.setCurrentUser(user);
 
                 // Login success
-                Parent dashboardRoot = FXMLLoader.load(getClass().getResource("/interfaces/view/Dashboard.fxml"));
+                Parent dashboardRoot = FXMLLoader.load(getClass().getResource("/view/Dashboard.fxml"));
                 Stage dashboardStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
                 dashboardStage.setScene(new Scene(dashboardRoot));
                 dashboardStage.setTitle("Elite Driving School");

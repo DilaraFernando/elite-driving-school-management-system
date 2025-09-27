@@ -83,6 +83,7 @@ public class UserBOImpl implements UserBO {
 
     @Override
     public UserDTO getUserByUsername(String inputUsername) {
-        return null;
+        User user = userDAO.getUserByUsername(inputUsername);
+        return converter.getUserDTO(user);
     }
 }

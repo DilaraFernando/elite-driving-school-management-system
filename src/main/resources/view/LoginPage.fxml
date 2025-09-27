@@ -133,13 +133,13 @@
                 </VBox>
                 <VBox prefHeight="200.0" prefWidth="100.0" />
                 <StackPane prefHeight="700.0" prefWidth="712.0">
-                    <children>
-                        <ImageView fitHeight="382.0" fitWidth="365.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../images/c8bf8e59dfdd6595527ba4f06e8fe630.jpg" />
-                            </image>
-                        </ImageView>
-                    </children>
+               <children>
+                  <ImageView fitHeight="403.0" fitWidth="419.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/a8c9a047a062220cbb74c1bc3b81f11d.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
                 </StackPane>
             </children>
         </HBox>
